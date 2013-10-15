@@ -170,6 +170,8 @@ TextEngineDataTokenizer.prototype.readString = function () {
         return null;
     }
 
+    c = cursor.readUInt16();
+
     while (!(c === 0x290a)) {
         value += String.fromCharCode(c);
         c = cursor.readUInt16();
